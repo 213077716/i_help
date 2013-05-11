@@ -1,0 +1,47 @@
+
+<div>
+	<h2>Update Product</h2>
+	
+	<%= form_for(:product, :url => {:action => 'update', :id => @product.id}) do |f| %>
+		<table>
+		
+		<tr>
+			<th>Name:</th>
+			<td><%= f.text_field(:name) %></td>
+		<tr/>
+	
+		<tr>
+			<th>Description:</th>
+			<td><%= f.text_area(:description, :size => "40x10") %></td>
+		<tr/>
+		
+		<tr>
+			<th>Quantity:</th>
+			<td><%= f.text_field(:quantity) %></td>
+		<tr/>
+		
+		<tr>
+			<th>Seeling price:</th>
+			<td><%= f.text_field(:selling_price) %></td>
+		<tr/>
+		
+		<tr>
+			<th>Buying price:</th>
+			<td><%= f.text_field(:buying_price) %></td>
+		<tr/>
+		
+		<tr>
+			<th>Category:</th>
+			<td><%= f.text_field(:category) %></td>
+		<tr/>
+		
+	</table>
+</div>
+
+<div>
+	<%= submit_tag("Create Product") %>
+</div>
+
+</br>
+<%= link_to("<< Back to List", {:action => 'list'}) %>
+<% end %>

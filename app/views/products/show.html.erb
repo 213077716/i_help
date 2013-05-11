@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Productlist</title>
+</head>
+
+<body>
+<div>
+
+	<h2> Show Product</h2>
+	
+	<table>
+		<tr>
+			<th>Name</th>
+			<td><%= @product.name %></td>
+		</tr>
+		
+		<tr>
+			<th>Description</th>
+			<td><%= @product.description %></td>
+		</tr>
+		
+		<tr>
+			<th>Price</th>
+			<td><%= @product.selling_price %></td>
+		</tr>
+		
+		<tr>
+			<th>Category</th>
+			<td><%= @product.category %></td>
+		</tr>
+		
+		<tr>
+			<th>Updated</th>
+			<td><%= @product.updated_at %></td>
+			
+		</tr>
+		
+		
+			
+			
+		
+	</table>
+</div>
+</br>
+<%= link_to("<< Back to List", {:action => 'list'}) %>
+</body>
+</html>
