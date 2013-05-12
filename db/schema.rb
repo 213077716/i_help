@@ -11,16 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130510143737) do
+ActiveRecord::Schema.define(:version => 20130512025229) do
 
   create_table "clients", :force => true do |t|
-    t.string   "first_name",      :limit => 50,                  :null => false
-    t.string   "last_name",       :limit => 50,                  :null => false
-    t.string   "email",           :limit => 100, :default => "", :null => false
-    t.string   "username",        :limit => 100,                 :null => false
-    t.string   "hashed_password", :limit => 50,                  :null => false
-    t.datetime "created_at",                                     :null => false
-    t.datetime "updated_at",                                     :null => false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "email"
+    t.string   "username"
+    t.string   "password"
+    t.string   "balance"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "products", :force => true do |t|

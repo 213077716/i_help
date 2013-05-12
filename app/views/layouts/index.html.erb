@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>index | <%= @subject_title ||'subject' %></title>
+<meta name="author" content="Manley Louis">
+<%= stylesheet_link_tag('style', :media => 'all') %>
+<%= javascript_include_tag('jquery.innerfade') %>
+<%= javascript_include_tag('jquery.min') %>
+
+</head>
+
+<body id="body">
+<!--Disable a page 1st div-->
+<div id="shadow" class="opaqueLayer"> </div>
+
+  <!------------------------Language--------------------------->
+      <nav class="langue" style="color:#06F; font-size:10px; text-align:right; cursor:pointer;">
+         <ul>
+         	<li>Language
+                <ul>
+                 <li id="en" onclick="langague()" style="color:#fff;"><%= image_tag('usa_flag.jpg', :size => '15x10', :alt => "English") %> English</li>
+                 <li id="fr" onclick="langague()" style="color:#fff;"><%= image_tag('french_flag.jpg', :size =>'15x10', :alt => "French") %> French</li>
+                </ul>
+            </li>
+          </ul>
+                                                
+     </nav>
+
+
+<table width="100%" cellpadding="0" cellspacing="0"  border="0">
+	<tr>
+    	<td>&nbsp;</td>
+        
+        <td width="1100">
+        	<div id="content">
+            	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+                 <!-----------------------------HEADER-------------------------->
+                	<tr>
+                    	<td colspan="3">
+                        	<table width="100%" cellpadding="0" cellspacing="0" height="5px" border="0"  >
+                            	<tr>
+                                	<td width="30%"><%= image_tag('logo.gif', :size => '200x50', :alt => "Logo") %></td>
+                                    
+                                    <td width="10%">&nbsp;</td>
+                             
+                                    <td width="60%">
+                                    	<div id="menu">
+                                        
+                                    		<ul>
+                                          
+                                        		<li onclick="construction()"><%= image_tag('shopping_cart.png', :size => '20x18') %><a href="##">Shopping Cart</a></li>
+                                                <li><%= image_tag('log.jpg', :size => '20x18') %><label style="color:#09F; font-size:10px;" onclick="ouvrir()">Sign In</label></li>
+                                                <li onclick="construction()"><%= image_tag('Signupjpg.jpg', :size => '20x18') %><a href="##" style="color:#09F">Sign Up</a></li>
+                                            	<li onclick="construction()"><%= image_tag('aboutus.jpg', :size => '20x18') %><a href="##">About Us</a></li>
+                                            	<li onclick="construction()"><%= image_tag('support.png', :size => '20x18') %><a href="##">Help & Support</a></li>
+                                                <li onclick="construction()"><%= image_tag('search.jpg', :size => '20x18') %><a href="##">Advanced Search</a></li>
+             							  	</ul>
+                                        </div>
+                                    </td>  
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                     <!-----------------------------Search engine-------------------------->
+                    
+                    <tr>
+                    	<td colspan="3">
+                        	<table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0px;">
+                            	<tr>
+                                	
+                                	<td width="40%">&nbsp; </td>
+                                    
+                                    <td width="30%"><input style="font-style:italic; border-bottom-right-radius:10px; border-bottom-left-radius:10px; border-top-left-radius:10px; border-top-right-radius:10px" name="search" type="text" size="150" value="Search here..." onfocus="
+                                    if(this.value=='Search here...'){this.value='';}" onblur=" if(this.value==''){this.value='Search here...';}"/></td>
+                         
+                                    <td width="30%">
+                                    	<input class="btn" name="btnsearch" type="submit" value="" />
+                                    </td>  
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                     <!-----------------------------Menu-------------------------->
+                    <tr>
+                    	<td colspan="3">
+                        	<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+                            	<tr>
+                                	<td width="20%">&nbsp;</td>
+                                    <td width="70%">
+                                    <nav >
+                            	<ul>
+                                	<li><a href="##">Computer</a>
+                                    	<ul>
+                                        	<li onclick="construction()"><a href="##">Laptops</a></li>
+                                            <li onclick="construction()"><a href="##">Pcs</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="##">Flash Drive</a>
+                                    	<ul>
+                                        	<li onclick="construction()"><a href="##">Tracert 4GB</a></li>
+                                            <li onclick="construction()"><a href="##">Tracert 8GB</a></li>
+                                            <li onclick="construction()"><a href="##">Tracert 32GB</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="##">Hard Drive</a>
+                                    	<ul>
+                                        	<li onclick="construction()"><a href="##">Tracend 4GB</a></li>
+                                            <li onclick="construction()"><a href="##">Tracend 8GB</a></li>
+                                            <li onclick="construction()"><a href="##">Tracend 32GB</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="##">Wacom Tablets</a>
+                                    	<ul>
+                                        	<li onclick="construction()"><a href="##">Apacer 1TB</a></li>
+                                            <li onclick="construction()"><a href="##">Apacer 2TB</a></li>
+                                        </ul>
+                                    </li>
+                                 </ul>
+                            </nav>
+                                    </td>
+                                    <td width="10%">&nbsp;</td>
+                                </tr>
+                            </table>
+   
+							
+                        </td>
+                    </tr>
+                    
+                    <tr bgcolor="#FFFFFF">
+                    	<td height="180px">
+                        
+                        		<div id="featured">
+            			 
+									
+
+ 
+                        
+                       
+                             
+                </div>	
+                        
+                        		
+                        
+                        </td>
+                    </tr>
+                    
+                    
+                    <tr class="load">
+                    	<td  height="850px" style="vertical-align:top"><h4><%= yield %></h4></td>
+                    </tr>
+                </table>
+                <h5 align="center">Copyright © Copyright 2013 ihelp Online (Pty) Ltd. All rights reserved</h5>
+                
+            </div>
+        
+        </td>
+        
+   		<td>&nbsp;</td>
+    </tr>
+
+</table>
+
+<!--Disable a page 2st div-->
+<div id="log" class="questionLayer">
+	<form action="" method="get" name="login">
+    
+    	
+    <table id="lo" border="0">
+    <tr>
+    <td><h3>Login</h3></td>
+    <td  height="20px" width="20px"style="cursor:pointer;"><label onclick="fermer()"><%= image_tag('close.jpg', :size =>'30x30', :alt => "Close") %>  </label></td>
+    </tr>
+  
+    	<tr>
+        
+        	<td><label>Username:</label></td>
+        	<td><input name="txtname" type="text" size="12" /></td>
+            
+        </tr>
+        
+        <tr>
+            <td><label>Password:</label></td>
+            <td><input name="txtpass" type="Password" size="12" /></td>
+        </tr>
+        
+        <tr>
+            <td><input name="txtsnd" type="submit" value=" Ok " /></td>
+            <td><input name="txtcancel" type="submit" value="Cancel"  /></td>
+        </tr>
+    </table>
+	</form>
+</div>
+
+<!--Loading page div
+<div id="loading" class="loading-invisible">
+  <p>Your content (like a loading GIF)</p>
+</div>
+-->
+
+
+</body>
+</html>
+
+
+<!--Disable a page 2st div-->
+<script type="text/javascript">
+ function getBrowserHeight() {
+                var intH = 0;
+                var intW = 0;
+               
+
+                if(typeof window.innerWidth  == 'number' ) {
+                   intH = window.innerHeight;
+                   intW = window.innerWidth;
+                }
+                else if(document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+                    intH = document.documentElement.clientHeight;
+                    intW = document.documentElement.clientWidth;
+                }
+                else if(document.body && (document.body.clientWidth || document.body.clientHeight)) {
+                    intH = document.body.clientHeight;
+                    intW = document.body.clientWidth;
+                }
+
+
+                return { width: parseInt(intW), height: parseInt(intH) };
+            }
+
+
+            function setLayerPosition() {
+                var shadow = document.getElementById("shadow");
+                var question = document.getElementById("log");
+
+
+                var bws = getBrowserHeight();
+                shadow.style.width = bws.width + "px";
+                shadow.style.height = bws.height + "px";
+
+
+                question.style.left = parseInt((bws.width - 350) / 6);
+                question.style.top = parseInt((bws.height - 200) / 6);
+
+
+                shadow = null;
+                question = null;
+            }
+
+
+            function ouvrir() {
+                setLayerPosition();
+
+
+                var shadow = document.getElementById("shadow");
+                var question = document.getElementById("log");
+ 
+
+                shadow.style.display = "block";
+                question.style.display = "block";
+
+
+                shadow = null;
+                question = null;
+            }
+            
+
+            function fermer() {
+                var shadow = document.getElementById("shadow");
+                var question = document.getElementById("log");
+ 
+
+                shadow.style.display = "none";
+                question.style.display = "none";
+
+
+                shadow = null;
+                question = null;
+            }
+
+			function construction(){
+			alert("Sorry this website is still under construction");
+			}
+			
+			function langague(){
+				var english=document.getElementById("en");
+				var french=document.getElementById("fr");
+				
+				
+					alert("This option is not yet available");
+					
+				}
+
+			function change(){
+			red=document.getElementsByName("red");
+			var blue=document.getElementsByName("blue");
+			
+		
+			
+					var bd=document.getElementById("body").style.backgroundColor="#09F";
+			
+					
+				}
+            window.onresize = setLayerPosition;
+			
+			
+//f//document.getElementById("log").style.display='none';
+	
+//}
+
+//function ouvrir() {
+//	document.getElementById("log").style.display='inline';
+	
+//}
+</script>
+
+

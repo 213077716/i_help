@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-
+	layout 'index'
 	def index
 		list
 		render('list')
@@ -22,6 +22,7 @@ class ProductsController < ApplicationController
 		@product = Product.new(params[:product])
 		# Save the object
 		if @product.save
+		flash[:notice] = "Product has been added successfully"
 		# If save succeeds, redirect to the list action
 		redirect_to(:action => 'list')
 		else
@@ -34,17 +35,28 @@ class ProductsController < ApplicationController
 		@product = Product.find(params[:id])
 	end
 	
-	def create
+	def update
 		# Find a new object using form parameters
 		@product = Products.find(params[:id])
 		
 		# Update the object
 		if @product.update_attributes(params[:product])
 		# If save succeeds, redirect to the list action
+		flash[:notice] = "Producte has been updated successfully"
 		redirect_to(:action => 'show', :id => @product.id)
 		else
 		# If save fails, redisplay the form so user can fix problems
 		render('edit')
 		end
 	end	
+	
+	def delete
+		@product = Product.find(params[:id])
+	end
+	
+	def destroy
+		Product.find(params[:id]).destroy
+		flash[:notice] = "Producte has been destroyed successfully"
+		redirect_to(:action => 'list')
+	end
 end

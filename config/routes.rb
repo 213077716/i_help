@@ -1,5 +1,6 @@
 IHelp::Application.routes.draw do
   root:to => "i_help#index"
+  match 'client', :to => 'access#menu'
   #get "i_help/index"
 
   # The priority is based upon order of creation:

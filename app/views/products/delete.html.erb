@@ -1,0 +1,16 @@
+<% @product_title = "Delete Product " %>
+<div>
+	<h2>Delete Subject </h2>
+	
+	<%= form_for(:product, :url => {:action => 'destroy', :id => @product.id}) do |f| -%>
+	
+	<p> Are you sure you want to permanently delete this product?</p>
+	
+	<p><%= @product.name %></p>
+	
+	<div>
+	<%= submit_tag("Delete Product") %>
+	</div>
+	
+	<% end %>
+</div>

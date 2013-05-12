@@ -1,9 +1,11 @@
-<html>
-<head>
-<title>Productlist</title>
-</head>
+<% if !flash[:notice].blank? %>
+<div>
+<%= flash[:notice] %>
+</div>
+<% end %>
 
-<body>
+<% @product_title = "Product List" %>
+
 <div>
 	<h2>Products</h2>
 	
@@ -36,5 +38,3 @@
 <br/>
 
 <%= link_to("Add New Product", {:action => 'new'}) %>
-</body>
-</html>
